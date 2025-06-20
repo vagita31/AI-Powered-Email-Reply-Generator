@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {
   "name": "Smart Mail",
@@ -25,4 +26,33 @@
   "action": {
     "default_title": " smart email assistant"
   }
+=======
+
+{
+  "name": "Smart Mail",
+  "description": "AI powered email reply generator",
+  "version": "1.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "https://localhost:8080/*",
+    "*://mail.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": ["*://mail.google.com/*"],
+      "run_at" : "document_end"
+    }
+  ],
+  "permissions" : ["activeTab", "storage"],
+  "web_accessible_resources": [
+    {
+      "resources": [ "icons/*" ],
+      "matches": [ "*://mail.google.com/*" ]
+    }
+  ],
+  "action": {
+    "default_title": " smart email assistant"
+  }
+>>>>>>> 153ad72 (initial commit)
 }
